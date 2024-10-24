@@ -11,8 +11,13 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useRoute } from 'vue-router';
 import { Todo, Meta } from 'components/models';
 import ExampleComponent from 'components/ExampleComponent.vue';
+
+// get router id
+const $route = useRoute();
+console.log($route.params.id);
 
 defineOptions({
   name: 'IndexPage'
